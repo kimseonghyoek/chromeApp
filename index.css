@@ -9,6 +9,7 @@ body {
 }
 
 #timeZone {
+    position: relative;
     display: inline-block;
     flex-direction: column;
     text-align: center;
@@ -44,10 +45,13 @@ input {
 label {
     position: relative;
     top: -1.5px;
+    color: #ffffff;
 }
 
 #weather {
     display: inline-block;
+    position: relative;
+    color: #ffffff;
 }
 
 #bg {
