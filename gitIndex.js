@@ -54,17 +54,31 @@ const callK_cityJson = (callback) => {
 }
 
 
-// 스파게티 코드 개선
 callK_cityJson((json) => {
-    console.log(json.Seoul);
+    // K_city.json 안에 있는 데이터 개수 확인
+    console.log(Object.keys(json).length);
 
-        getJson(`api`, function(err, data) {
+    for(i = 0; i < Object.keys(json).length; i++) {
+        const jsonData =(Object.keys(json));
+        let JsonArray = new Array();
+        JsonArray.push(jsonData);
+
+        // 아직 미작업 부분(스파게티 코드 수정)
+        console.log(JsonArray);
+        getJson(`api주소${JsonArray[0 + i]}api아이디`, function(err, data) {
         const wea = document.getElementById('weather');
-
         if(err !== null) {
             alert(err);
         } else {
             wea.innerText = (`${json.Seoul.k_cityName} * ${data.main.temp}`);
         }
     });
+    }
+})
+
+// 스파게티 코드 개선
+callK_cityJson((json) => {
+    console.log(json.Seoul);
+
+
 })
