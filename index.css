@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    background-image: url('/IMG/korea.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    flex-flow: column;
+}
+
+#timeZone {
+    display: inline-block;
+    flex-direction: column;
+    text-align: center;
+    width: 25%;
+}
+
+#time {
+    display: contents;
+    font-size: 100px;
+}
+
+h1 {
+    color: white;
+}
+
+#chk {
+    display: flex;
+    white-space: nowrap;
+    justify-content: center;
+}
+
+#sec {
+    margin-left: 10px;
+    margin-top: 4px;
+}
+
+input {
+    position: relative;
+    margin: 0%;
+    top: 1.5px;
+}
+
+label {
+    position: relative;
+    top: -1.5px;
+}
+
+#weather {
+    display: inline-block;
+}
+
+#bg {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
