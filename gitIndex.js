@@ -15,7 +15,6 @@ const time = () => {
     }
 }
 
-
 const nowTime = () => {
     setInterval(() => {
         time();
@@ -60,25 +59,21 @@ callK_cityJson((json) => {
 
     for(i = 0; i < Object.keys(json).length; i++) {
         const jsonData =(Object.keys(json));
+        console.log(json);
         let JsonArray = new Array();
         JsonArray.push(jsonData);
-
-        // 아직 미작업 부분(스파게티 코드 수정)
-        console.log(JsonArray);
-        getJson(`api주소${JsonArray[0 + i]}api아이디`, function(err, data) {
+        console.log(jsonData);
+        console.log(JsonArray[0][0+i].cityName);
+        getJson(`${JsonArray[0][0+i]}`, function(err, data) {
         const wea = document.getElementById('weather');
         if(err !== null) {
             alert(err);
         } else {
-            wea.innerText = (`${json.Seoul.k_cityName} * ${data.main.temp}`);
+            wea.innerText = (`${JsonArray[0][0+i]} * ${data.main.temp}`);
+            // if(i >= 1) {
+            //     let addWeather = document.createElement(`<p>${json.Seoul.k_cityName} * ${data.main.temp}</p>`)
+            // }
         }
     });
     }
-})
-
-// 스파게티 코드 개선
-callK_cityJson((json) => {
-    console.log(json.Seoul);
-
-
 })
