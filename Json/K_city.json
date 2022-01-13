@@ -7,21 +7,9 @@
         "cityName": "incheon",
         "k_cityName": "인천"
     },
-    "Gwanju": {
-        "cityName": "gwanju",
-        "k_cityName": "광주"
-    },
     "Haenam": {
         "cityName": "haenam",
         "k_cityName": "해남"
-    },
-    "Jejucity": {
-        "cityName": "jejucity",
-        "k_cityName": "제주도"
-    },
-    "Chunchoen": {
-        "cityName": "chunchoen",
-        "k_cityName": "춘천"
     },
     "Busan": {
         "cityName": "busan",
