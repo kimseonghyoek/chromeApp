@@ -52,6 +52,13 @@ const callK_cityJson = (callback) => {
     xhr.send(null);
 }
 
+const addK_city = (jsonArray) => {
+    const weatherId = document.getElementById("weather");
+    let addCityWeather = document.createElement("p");
+    const ment = document.createTextNode("test");
+    addCityWeather.appendChild(ment);
+    weatherId.appendChild(addCityWeather);
+}
 
 callK_cityJson((json) => {
     // K_city.json 안에 있는 데이터 개수 확인
@@ -63,16 +70,18 @@ callK_cityJson((json) => {
         let JsonArray = new Array();
         JsonArray.push(jsonData);
         console.log(jsonData);
-        console.log(JsonArray[0][0+i].cityName);
-        getJson(`${JsonArray[0][0+i]}`, function(err, data) {
+        console.log(JsonArray[0][0+i]);
+        getJson(`{JsonArray[0][0+i]}`, function(err, data) {
         const wea = document.getElementById('weather');
         if(err !== null) {
             alert(err);
         } else {
             wea.innerText = (`${JsonArray[0][0+i]} * ${data.main.temp}`);
-            // if(i >= 1) {
-            //     let addWeather = document.createElement(`<p>${json.Seoul.k_cityName} * ${data.main.temp}</p>`)
-            // }
+            if(i > 0) {
+                for(j = 1; j < i; j++) {
+                    addK_city();
+                }
+            }
         }
     });
     }
