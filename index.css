@@ -5,7 +5,11 @@ body {
     background-image: url('/IMG/korea.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    flex-flow: column;
+}
+
+#left {
+    display: flex;
+    flex-direction: column;
 }
 
 #timeZone {
@@ -14,6 +18,7 @@ body {
     flex-direction: column;
     text-align: center;
     width: 25%;
+    margin: 1%;
 }
 
 #time {
@@ -52,6 +57,8 @@ label {
     display: inline-block;
     position: relative;
     color: #ffffff;
+    font-size: 260%;
+    margin-left: 1%;
 }
 
 #bg {
